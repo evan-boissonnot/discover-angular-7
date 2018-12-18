@@ -6,7 +6,32 @@
 
 <input type="text" (keyup)="testOnKeyPress($event)" />
 
-<p>{{onKeyPressValue}}</p>
+<p style="color:red;">{{onKeyPressValue}}</p>
 
-<input type="text" #box (keyup)="testOnKeyPressAmeliore(box.value)" />
-<p>{{box.value}}</p>
+<!-- any key pressed -->
+<label>Key up</label>
+<input type="text" #monChampDeSaisie (keyup)="testOnKeyPressAmeliore(monChampDeSaisie.value)" />
+<p>{{monChampDeSaisie.value}}</p>
+
+<!-- Filter key up : press enter -->
+<label>Key up enter</label>
+<input type="text" #monChampDeSaisie2 (keyup.enter)="testOnKeyPressAmeliore(monChampDeSaisie2.value)" />
+<p>{{monChampDeSaisie2.value}}</p>
+
+<!-- perte de focus-->
+<label>Perte focus</label>
+<input type="text" #monChampDeSaisie3 (blur)="testOnKeyPressAmeliore(monChampDeSaisie3.value)" />
+
+<!-- clone 1 has no weapon : html bloc should not appear on the web -->
+<div *ngIf="clone.weapon">L’arme a une puissance de {{ clone.weapon.power }}</div>
+
+<!-- clone 2 has weapon : html bloc should appear on the web -->
+<div *ngIf="clone2.weapon">L’arme a une puissance de {{ clone2.weapon.power }}</div>
+
+<div *ngIf="clones" class="grid">
+    <div *ngFor="let oneClone of clones" class="row">
+        <p>
+            {{oneClone.name}}
+        </p>
+    </div>
+</div>

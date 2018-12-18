@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 // import of needed elements
 const core_1 = require("@angular/core");
+const gun_1 = require("./models/gun");
 const mock_clones_1 = require("./services/mock-clones");
 // declaration of the component tag / class decoration
 // selector et template sont obligatoires
@@ -20,6 +21,9 @@ let AppComponent = class AppComponent {
     }
     ngOnInit() {
         this._clones = mock_clones_1.CLONES;
+        this.clone = this._clones[0];
+        this.clone2 = this._clones[1];
+        this.clone2.weapon = new gun_1.Gun("Blaster", 18);
     }
     // getter for _title property
     get title() {
@@ -28,6 +32,10 @@ let AppComponent = class AppComponent {
     // setter for _title property
     set title(value) {
         this._title = value;
+    }
+    // getter of the clone array
+    get clones() {
+        return this._clones;
     }
     testOnKeyPress(event) {
         this.onKeyPressValue = event.target.value;

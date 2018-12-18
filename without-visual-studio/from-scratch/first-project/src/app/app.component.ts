@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 import { OnInit } from "@angular/core"; // Interface to init
 
 import { Clone } from "./models/clone";
+import { Gun } from "./models/gun";
 import { CLONES } from "./services/mock-clones";
 
 // declaration of the component tag / class decoration
@@ -16,9 +17,15 @@ export class AppComponent implements OnInit{
     private _title = "Les clones";
     
     onKeyPressValue = "";
+    clone: Clone;
+    clone2: Clone;
     
     ngOnInit(): void {
         this._clones = CLONES;
+        this.clone = this._clones[0];
+
+        this.clone2 = this._clones[1];
+        this.clone2.weapon = new Gun("Blaster", 18);
     }
 
     // getter for _title property
@@ -29,6 +36,11 @@ export class AppComponent implements OnInit{
     // setter for _title property
     set title(value) {
         this._title = value;
+    }
+
+    // getter of the clone array
+    get clones() : Clone[] {
+        return this._clones;
     }
 
     testOnKeyPress(event: any) {
