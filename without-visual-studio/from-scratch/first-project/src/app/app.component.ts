@@ -9,17 +9,38 @@ import { CLONES } from "./services/mock-clones";
 // selector et template sont obligatoires
 @Component({
     selector: "clonewars-app",
-    template: "<h1>Liste des clones</h1>"
+    templateUrl: "./app/app.component.html"
 })
 export class AppComponent implements OnInit{
+    private _clones: Clone[];
+    private _title = "Les clones";
+    
+    onKeyPressValue = "";
+    
     ngOnInit(): void {
         this._clones = CLONES;
     }
-    name = "Angular";
 
-    private _clones: Clone[];
+    // getter for _title property
+    get title() {
+        return this._title;
+    }
+
+    // setter for _title property
+    set title(value) {
+        this._title = value;
+    }
+
+    testOnKeyPress(event: any) {
+        this.onKeyPressValue = event.target.value;
+    }
+
+    testOnKeyPressAmeliore(value: string) {
+        console.log(value);
+        this.onKeyPressValue = value;
+    }
 
     selectClone(clone: Clone) {
-        alert('Hey ' + clone.name);
+        alert('Hey ' + (clone != null ? clone.name : "empty"));
     }
 }

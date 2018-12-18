@@ -15,19 +15,35 @@ let AppComponent = class AppComponent {
     // declaration of the component tag / class decoration
     // selector et template sont obligatoires
     constructor() {
-        this.name = "Angular";
+        this._title = "Les clones";
+        this.onKeyPressValue = "";
     }
     ngOnInit() {
         this._clones = mock_clones_1.CLONES;
     }
+    // getter for _title property
+    get title() {
+        return this._title;
+    }
+    // setter for _title property
+    set title(value) {
+        this._title = value;
+    }
+    testOnKeyPress(event) {
+        this.onKeyPressValue = event.target.value;
+    }
+    testOnKeyPressAmeliore(value) {
+        console.log(value);
+        this.onKeyPressValue = value;
+    }
     selectClone(clone) {
-        alert('Hey ' + clone.name);
+        alert('Hey ' + (clone != null ? clone.name : "empty"));
     }
 };
 AppComponent = __decorate([
     core_1.Component({
         selector: "clonewars-app",
-        template: "<h1>Liste des clones</h1>"
+        templateUrl: "./app/app.component.html"
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
