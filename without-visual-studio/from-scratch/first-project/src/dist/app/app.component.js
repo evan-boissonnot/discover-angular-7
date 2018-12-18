@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 // import of needed elements
 const core_1 = require("@angular/core");
+const mock_clones_1 = require("./services/mock-clones");
 // declaration of the component tag / class decoration
 // selector et template sont obligatoires
 let AppComponent = class AppComponent {
@@ -16,11 +17,17 @@ let AppComponent = class AppComponent {
     constructor() {
         this.name = "Angular";
     }
+    ngOnInit() {
+        this._clones = mock_clones_1.CLONES;
+    }
+    selectClone(clone) {
+        alert('Hey ' + clone.name);
+    }
 };
 AppComponent = __decorate([
     core_1.Component({
         selector: "clonewars-app",
-        template: "<h1>Hello {{name}}"
+        template: "<h1>Liste des clones</h1>"
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
