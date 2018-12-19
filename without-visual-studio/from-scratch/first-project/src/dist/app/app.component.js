@@ -17,6 +17,7 @@ let AppComponent = class AppComponent {
     // selector et template sont obligatoires
     constructor() {
         this._title = "Les clones";
+        this.isDemo = false;
         this.onKeyPressValue = "";
     }
     ngOnInit() {

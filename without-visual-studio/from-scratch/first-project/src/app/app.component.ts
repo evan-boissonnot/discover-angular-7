@@ -16,6 +16,7 @@ export class AppComponent implements OnInit{
     private _clones: Clone[];
     private _title = "Les clones";
     
+    isDemo: boolean = false;
     onKeyPressValue = "";
     clone: Clone;
     clone2: Clone;
