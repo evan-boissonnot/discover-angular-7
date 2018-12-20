@@ -1,0 +1,18 @@
+<h1 class="center">{{title}}</h1>
+
+<div class="container" *ngIf="clones">
+    <div appHighlight borderColor="green"  *ngFor="let oneClone of clones" class="row" >
+        <div class="card">
+            <div class="card-stacked">
+                <div class="card-content">
+                        <p>
+                            {{oneClone.name}}
+                        </p>
+                        <p>
+                            <a (click)="selectOne(oneClone)">Voir le détail</a>
+                        </p>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

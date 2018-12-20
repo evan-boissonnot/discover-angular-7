@@ -1,0 +1,10 @@
+<ng-container *ngIf="clone; else elseTemplate">
+    <div class="container">
+        {{clone.name}}
+    </div>
+</ng-container>
+<ng-template #elseTemplate>
+    <i>Aucun clone disponible pour cet identifiant</i>
+</ng-template>
+
+<button (click)="goBack()">Retour à la liste des clones</button>

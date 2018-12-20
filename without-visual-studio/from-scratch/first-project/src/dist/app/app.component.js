@@ -16,7 +16,6 @@ let AppComponent = class AppComponent {
     // declaration of the component tag / class decoration
     // selector et template sont obligatoires
     constructor() {
-        this._title = "Les clones";
         this.isDemo = false;
         this.onKeyPressValue = "";
     }
@@ -26,27 +25,12 @@ let AppComponent = class AppComponent {
         this.clone2 = this._clones[1];
         this.clone2.weapon = new gun_1.Gun("Blaster", 18);
     }
-    // getter for _title property
-    get title() {
-        return this._title;
-    }
-    // setter for _title property
-    set title(value) {
-        this._title = value;
-    }
-    // getter of the clone array
-    get clones() {
-        return this._clones;
-    }
     testOnKeyPress(event) {
         this.onKeyPressValue = event.target.value;
     }
     testOnKeyPressAmeliore(value) {
         console.log(value);
         this.onKeyPressValue = value;
-    }
-    selectClone(clone) {
-        alert('Hey ' + (clone != null ? clone.name : "empty"));
     }
 };
 AppComponent = __decorate([

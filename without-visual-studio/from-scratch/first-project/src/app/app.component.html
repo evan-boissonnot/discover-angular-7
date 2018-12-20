@@ -1,4 +1,10 @@
-<h1 class="center">{{title}}</h1>
+<nav>
+    <ul>
+        <li><a href="#">Les clones</a></li>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>
 
 <div *ngIf="isDemo">
     <div>Prepare for war !</div>
@@ -30,14 +36,3 @@
     <div *ngIf="clone2.weapon">L’arme a une puissance de {{ clone2.weapon.power }}</div>
 </div>
 
-<div class="container" *ngIf="clones">
-        <div appHighlight borderColor="green"  *ngFor="let oneClone of clones" class="row" >
-            <div class="card">
-                <div class="card-stacked">
-                    <div class="card-content">
-                            {{oneClone.name}}
-                    </div>
-                </div>
-            </div>        
-        </div>
-</div>
