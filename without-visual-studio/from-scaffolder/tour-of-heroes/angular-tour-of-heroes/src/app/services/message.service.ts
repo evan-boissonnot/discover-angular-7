@@ -19,4 +19,8 @@ export class MessageService {
   get messages(): string[] {
     return this._messages;
   }
+
+  get isWithMessages(): boolean {
+    return this._messages.length > 0;
+  }
 }

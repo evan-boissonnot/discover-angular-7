@@ -1,0 +1,12 @@
+<div *ngIf="isWithMessages">
+  <div>
+    Centre d'information
+    <a (click)="clearMessages()">Valider toutes les notifications</a>
+  </div>
+  
+  <ul>
+    <li *ngFor="let message of messages">
+      <i>{{message}}</i>
+    </li>
+  </ul>
+</div>
