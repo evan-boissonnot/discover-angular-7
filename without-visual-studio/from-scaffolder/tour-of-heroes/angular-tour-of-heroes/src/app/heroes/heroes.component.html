@@ -1,3 +1,19 @@
-<div class="container">
-  
-</div>  
+
+<div class="container" *ngIf="heroes">
+    <div *ngFor="let hero of heroes">
+        <div class="card"  (click)="onSelect(hero)" [class.selected]="hero === selectHero" >
+                <div class="card-stacked">
+                    <div class="card-content">
+                            <p>
+                                {{hero.name}}
+                            </p>
+                            <p>
+                                <a >Voir le détail !</a>
+                            </p>
+                    </div>
+                </div>
+        </div>     
+    </div>
+</div>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
