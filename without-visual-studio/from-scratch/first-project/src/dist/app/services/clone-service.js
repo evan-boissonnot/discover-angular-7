@@ -10,9 +10,7 @@ const core_1 = require("@angular/core");
 let CloneService = class CloneService {
 };
 CloneService = __decorate([
-    core_1.Injectable({
-        providedIn: 'root'
-    })
+    core_1.Injectable()
 ], CloneService);
 exports.CloneService = CloneService;
 //# sourceMappingURL=clone-service.js.map

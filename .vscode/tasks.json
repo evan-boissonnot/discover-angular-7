@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/with-visual-studio/with-aspnet-core/AngularApplication.Test.002/AngularApplication.Test.002/AngularApplication.Test.002.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
