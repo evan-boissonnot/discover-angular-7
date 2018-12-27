@@ -1,14 +1,14 @@
 
 <div class="container" *ngIf="heroes">
     <div *ngFor="let hero of heroes">
-        <div class="card"  (click)="onSelect(hero)" [class.selected]="hero === selectHero" >
+        <div class="card"   [class.selected]="hero === selectHero" >
                 <div class="card-stacked">
                     <div class="card-content">
                             <p>
                                 {{hero.name}}
                             </p>
                             <p>
-                                <a >Voir le détail !</a>
+                                <a class="waves-effect waves-light btn modal-trigger" (click)="onSelect(hero)" href="#modal1">Voir le détail !</a>
                             </p>
                     </div>
                 </div>
