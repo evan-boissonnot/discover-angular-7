@@ -28,7 +28,7 @@ export class HeroesComponent implements OnInit {
   }
 
   receiptHeroAdded(hero: Hero): void {
-    console.log('hero added : ' + hero.name);
+    this.heroes.push(hero);
   }
 
 }
