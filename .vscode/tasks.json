@@ -10,6 +10,26 @@
                 "${workspaceFolder}/with-visual-studio/with-aspnet-core/AngularApplication.Test.002/AngularApplication.Test.002/AngularApplication.Test.002.csproj"
             ],
             "problemMatcher": "$msCompile"
-        }
+        },
+        {
+            "label": "ng serve",
+            "type": "npm",
+            "script": "start",
+            "problemMatcher": [],
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
+          },
+          {
+            "label": "ng test",
+            "type": "npm",
+            "script": "test",
+            "problemMatcher": [],
+            "group": {
+              "kind": "test",
+              "isDefault": true
+            }
+          }
     ]
 }

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Hero } from '../models/hero';
+import { HeroService } from '../services/hero.service';
 
 declare var M: any; // Materialize javascript framework
 
@@ -13,14 +14,19 @@ export class HeroDetailComponent implements OnInit, AfterViewInit {
   @Input() hero: Hero;
   private _modalElement: any;
 
+  constructor(private _service: HeroService) {
+  }
+
+  ngOnInit() {
+
+  }
+
   ngAfterViewInit(): void {
     M.Modal.init(this.modal.nativeElement);
   }
 
-  constructor() { }
-
-  ngOnInit() {
-
+  save(): void {
+    this._service.updateHero(this.hero).subscribe();
   }
 
 }

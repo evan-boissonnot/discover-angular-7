@@ -27,4 +27,8 @@ export class HeroesComponent implements OnInit {
     this.selectedHero = hero;
   }
 
+  receiptHeroAdded(hero: Hero): void {
+    console.log('hero added : ' + hero.name);
+  }
+
 }

@@ -11,6 +11,10 @@ import { HEROES } from '../models/mock-heroes';
 import { MessageService } from './message.service';
 import { BaseService } from './base.service';
 
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
 @Injectable({
   providedIn: 'root'
 })
@@ -35,11 +39,15 @@ export class HeroService extends BaseService {
   }
 
   addNewHero(hero: Hero): Observable<Hero> {
-    throw new Error('Not implemented');
+    return this._httpClient.post<Hero>(this._apiUrl, hero, httpOptions)
+                           .pipe(catchError(this.handleError('saveHero', hero)),
+                                 tap(result => this.log('ajout hero : OK')));
   }
 
   updateHero(hero: Hero): Observable<Hero> {
-    throw new Error('Not implemented');
+    return this._httpClient.put<Hero>(this._apiUrl, hero, httpOptions)
+                           .pipe(catchError(this.handleError('saveHero', hero)),
+                                 tap(result => this.log('mise à jour : OK')));
   }
 
   deleteHero(id: number): void {
