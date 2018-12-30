@@ -34,6 +34,11 @@ export class HeroService extends BaseService {
                            // .pipe(tap(result => this._messageLogger.add('Les données sont chargées')));
   }
 
+  searchHeroes(content: string): Observable<Hero[]> {
+    return this._httpClient.get<Hero[]>(this._apiUrl + '?search=' + content)
+                           .pipe(catchError(this.handleError('getHeroes', [])));
+  }
+
   getHero(id: number): Observable<Hero> {
     throw new Error('Not implemented');
   }
@@ -51,10 +56,6 @@ export class HeroService extends BaseService {
   }
 
   deleteHero(id: number): void {
-    throw new Error('Not implemented');
-  }
-
-  search(content: string): Observable<Hero[]> {
     throw new Error('Not implemented');
   }
 }

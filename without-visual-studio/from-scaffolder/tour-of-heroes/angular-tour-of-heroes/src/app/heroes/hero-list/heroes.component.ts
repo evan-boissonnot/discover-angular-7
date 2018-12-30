@@ -14,7 +14,7 @@ export class HeroesComponent implements OnInit, OnDestroy {
   heroes: Hero[];
   selectedHero: Hero;
 
-  private _getHeroesObservable: Subscription;
+  private _getHeroesObservables: Subscription[] = [];
 
   constructor(private _heroService: HeroService) { }
 
@@ -23,11 +23,12 @@ export class HeroesComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this._getHeroesObservable.unsubscribe();
+    this._getHeroesObservables.forEach((item) => item.unsubscribe());
   }
 
   getHeroes(): void {
-    this._getHeroesObservable = this._heroService.getHeroes().subscribe(heroesList => this.heroes = heroesList);
+    const subscription = this._heroService.getHeroes().subscribe(heroesList => this.heroes = heroesList);
+    this._getHeroesObservables.push(subscription);
   }
 
   onSelect(hero: Hero): void {
@@ -38,4 +39,11 @@ export class HeroesComponent implements OnInit, OnDestroy {
     this.heroes.push(hero);
   }
 
+  receiptSearchingHeroes(content: string): void {
+    console.log('searching : ' + content);
+
+    const subscription = this._heroService.searchHeroes(content)
+                                          .subscribe(heroesList => this.heroes = heroesList);
+    this._getHeroesObservables.push(subscription);
+  }
 }

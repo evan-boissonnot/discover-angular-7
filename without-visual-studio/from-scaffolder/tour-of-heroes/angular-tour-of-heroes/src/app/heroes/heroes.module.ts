@@ -8,6 +8,7 @@ import { HeroAddComponent } from './hero-add/hero-add.component';
 import { HeroService } from '../services/hero.service';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     HeroesComponent,
     HeroDetailComponent,
-    HeroAddComponent
+    HeroAddComponent,
+    HeroSearchComponent
   ],
   providers: [
     HeroService
