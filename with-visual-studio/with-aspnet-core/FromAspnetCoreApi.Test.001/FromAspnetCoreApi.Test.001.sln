@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FromAspnetCoreApi.Test.001", "FromAspnetCoreApiTest001\FromAspnetCoreApi.Test.001.csproj", "{59D8D536-F1F1-4EDB-A770-75FB6FA70161}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularApplication.Test.002", "..\AngularApplication.Test.002\AngularApplication.Test.002\AngularApplication.Test.002.csproj", "{1E4A3584-27B5-41BD-AAF2-8ED0390145E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "From project template", "From project template", "{7989B668-2F38-4AB4-BA5C-40C3F7AA9C17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "From scratch", "From scratch", "{DE0A376B-55DF-4686-8788-8E74F441D377}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,17 @@ Global
 		{59D8D536-F1F1-4EDB-A770-75FB6FA70161}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59D8D536-F1F1-4EDB-A770-75FB6FA70161}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59D8D536-F1F1-4EDB-A770-75FB6FA70161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E4A3584-27B5-41BD-AAF2-8ED0390145E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E4A3584-27B5-41BD-AAF2-8ED0390145E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E4A3584-27B5-41BD-AAF2-8ED0390145E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E4A3584-27B5-41BD-AAF2-8ED0390145E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59D8D536-F1F1-4EDB-A770-75FB6FA70161} = {DE0A376B-55DF-4686-8788-8E74F441D377}
+		{1E4A3584-27B5-41BD-AAF2-8ED0390145E7} = {7989B668-2F38-4AB4-BA5C-40C3F7AA9C17}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B82C7243-5A0B-445A-AEA7-D0F6FC18E7C8}
