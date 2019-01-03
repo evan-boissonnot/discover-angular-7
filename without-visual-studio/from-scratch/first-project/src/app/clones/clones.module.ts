@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CloneListComponent } from './clone-list/clone-list.component';
 import { MoreDetailCloneComponent } from './more-detail-clone.component';
 import { ClonesRouteConfigModule } from './clones-route-config.module';
+import { CloneService } from '../services/clone-service';
 
 @NgModule({
   imports: [
@@ -13,6 +14,9 @@ import { ClonesRouteConfigModule } from './clones-route-config.module';
   declarations: [
     CloneListComponent,
     MoreDetailCloneComponent
+  ],
+  providers: [
+    CloneService
   ]
 })
 export class ClonesModule { }

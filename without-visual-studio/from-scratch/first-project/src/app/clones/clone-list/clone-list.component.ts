@@ -3,7 +3,7 @@ import { Router } from "@angular/router";
 
 import { Clone } from "../../models/clone";
 import { Gun } from "../../models/gun";
-import { CLONES } from "../../services/mock-clones";
+import { CloneService } from '../../services/clone-service';
 
 @Component({
   selector: 'app-clone-list',
@@ -14,10 +14,10 @@ export class CloneListComponent implements OnInit {
   private _clones: Clone[];
   private _title = "Les clones";
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router, private _service: CloneService) { }
 
   ngOnInit() {
-    this._clones = CLONES;
+    this._clones = this._service.getList();
   }
 
   selectOne(clone: Clone) {

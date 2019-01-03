@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { CloneService } from "./../services/clone-service";
 import { OnInit } from "@angular/core"; // Interface to init
 import { Router, ActivatedRoute, Params} from "@angular/router";
 
@@ -12,13 +13,12 @@ import { Clone } from "../models/clone";
 export class MoreDetailCloneComponent implements OnInit{
     private _clone: Clone;
 
-    constructor(private _route: ActivatedRoute, private _router: Router) {
+    constructor(private _route: ActivatedRoute, private _router: Router,
+        private _service: CloneService) {
     }
 
     ngOnInit(): void {
-        this._clone = CLONES.find((value: Clone, index: number, obj: Clone[]) => {
-            return value.id === +this._route.snapshot.params["id"]; // + to cast to int
-        });
+        this._clone = this._service.getOne(+this._route.snapshot.params["id"]);
     }
 
     goBack() {

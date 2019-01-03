@@ -23,6 +23,9 @@ import { ClonesModule } from "./clones/clones.module";
    ],
    bootstrap: [
       AppComponent//moduleracineaudémarrage
+   ],
+   providers: [
+       
    ]
 })
 export class AppModule {
