@@ -29,7 +29,8 @@ AppModule = __decorate([
         ],
         bootstrap: [
             app_component_1.AppComponent //moduleracineaudémarrage
-        ]
+        ],
+        providers: []
     })
 ], AppModule);
 exports.AppModule = AppModule;

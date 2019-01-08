@@ -8,20 +8,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
 const common_1 = require("@angular/common");
+const forms_1 = require("@angular/forms");
 const clone_list_component_1 = require("./clone-list/clone-list.component");
 const more_detail_clone_component_1 = require("./more-detail-clone.component");
 const clones_route_config_module_1 = require("./clones-route-config.module");
+const clone_service_1 = require("../services/clone-service");
+const clone_form_component_1 = require("./clone-form/clone-form.component");
 let ClonesModule = class ClonesModule {
 };
 ClonesModule = __decorate([
     core_1.NgModule({
         imports: [
             common_1.CommonModule,
+            forms_1.FormsModule,
             clones_route_config_module_1.ClonesRouteConfigModule
         ],
         declarations: [
             clone_list_component_1.CloneListComponent,
-            more_detail_clone_component_1.MoreDetailCloneComponent
+            more_detail_clone_component_1.MoreDetailCloneComponent,
+            clone_form_component_1.CloneFormComponent
+        ],
+        providers: [
+            clone_service_1.CloneService
         ]
     })
 ], ClonesModule);

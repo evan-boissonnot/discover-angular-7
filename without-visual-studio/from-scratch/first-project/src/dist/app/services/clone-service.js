@@ -7,7 +7,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
+const mock_clones_1 = require("./../services/mock-clones");
 let CloneService = class CloneService {
+    getList() {
+        return mock_clones_1.CLONES;
+    }
+    getOne(id) {
+        return mock_clones_1.CLONES.find((item, index, array) => item.id == id);
+    }
 };
 CloneService = __decorate([
     core_1.Injectable()

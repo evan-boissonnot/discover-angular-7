@@ -10,42 +10,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
+const clone_1 = require("./../../models/clone");
 const router_1 = require("@angular/router");
 const clone_service_1 = require("../../services/clone-service");
-let CloneListComponent = class CloneListComponent {
-    constructor(_router, _service) {
+let CloneFormComponent = class CloneFormComponent {
+    constructor(_route, _router, _service) {
+        this._route = _route;
         this._router = _router;
         this._service = _service;
-        this._title = "Les clones";
     }
     ngOnInit() {
-        this._clones = this._service.getList();
     }
-    selectOne(clone) {
-        console.log('Hey ' + (clone != null ? clone.name : "empty"));
-        let url = ["/clone", clone.id];
-        this._router.navigate(url);
-    }
-    // getter for _title property
-    get title() {
-        return this._title;
-    }
-    // setter for _title property
-    set title(value) {
-        this._title = value;
-    }
-    // getter of the clone array
-    get clones() {
-        return this._clones;
+    onSubmit() {
+        let link = ['/clone', this.clone.id];
+        this._router.navigate(link);
     }
 };
-CloneListComponent = __decorate([
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", clone_1.Clone)
+], CloneFormComponent.prototype, "clone", void 0);
+CloneFormComponent = __decorate([
     core_1.Component({
-        selector: 'app-clone-list',
-        templateUrl: './app/clones/clone-list/clone-list.component.html',
-        styleUrls: ['./app/clones/clone-list/clone-list.component.css']
+        selector: 'app-clone-form',
+        templateUrl: './clone-form.component.html',
+        styleUrls: ['./clone-form.component.css']
     }),
-    __metadata("design:paramtypes", [router_1.Router, clone_service_1.CloneService])
-], CloneListComponent);
-exports.CloneListComponent = CloneListComponent;
-//# sourceMappingURL=clone-list.component.js.map
+    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router,
+        clone_service_1.CloneService])
+], CloneFormComponent);
+exports.CloneFormComponent = CloneFormComponent;
+//# sourceMappingURL=clone-form.component.js.map

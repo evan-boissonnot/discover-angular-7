@@ -29,8 +29,15 @@ export class HeroService extends BaseService {
   }
 
   getHeroes(): Observable<Hero[]> {
+    const returnList: Hero[] = [];
+
     return this._httpClient.get<Hero[]>(this._apiUrl)
-                           .pipe(catchError(this.handleError('getHeroes', [])));
+                           .pipe(
+                            map(function(list: Hero[]): Hero[] {
+                              list.forEach(item => returnList.push(new Hero(item)));
+                              return returnList;
+                            }),
+                            catchError(this.handleError('getHeroes', [])));
                            // .pipe(tap(result => this._messageLogger.add('Les données sont chargées')));
   }
 

@@ -10,17 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
+const clone_service_1 = require("./../services/clone-service");
 const router_1 = require("@angular/router");
-const mock_clones_1 = require("../services/mock-clones");
 let MoreDetailCloneComponent = class MoreDetailCloneComponent {
-    constructor(_route, _router) {
+    constructor(_route, _router, _service) {
         this._route = _route;
         this._router = _router;
+        this._service = _service;
     }
     ngOnInit() {
-        this._clone = mock_clones_1.CLONES.find((value, index, obj) => {
-            return value.id === +this._route.snapshot.params["id"]; // + to cast to int
-        });
+        this._clone = this._service.getOne(+this._route.snapshot.params["id"]);
     }
     goBack() {
         this._router.navigate(["./clones"]);
@@ -37,7 +36,8 @@ MoreDetailCloneComponent = __decorate([
         selector: "detail-clone",
         templateUrl: "./app/clones/more-detail-clone.component.html"
     }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router])
+    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router,
+        clone_service_1.CloneService])
 ], MoreDetailCloneComponent);
 exports.MoreDetailCloneComponent = MoreDetailCloneComponent;
 //# sourceMappingURL=more-detail-clone.component.js.map
