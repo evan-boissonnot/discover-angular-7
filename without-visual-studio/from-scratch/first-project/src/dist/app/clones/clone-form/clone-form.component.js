@@ -33,10 +33,11 @@ __decorate([
 CloneFormComponent = __decorate([
     core_1.Component({
         selector: 'app-clone-form',
-        templateUrl: './clone-form.component.html',
-        styleUrls: ['./clone-form.component.css']
+        templateUrl: './app/clones/clone-form/clone-form.component.html',
+        styleUrls: ['./app/clones/clone-form/clone-form.component.css']
     }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router,
+    __metadata("design:paramtypes", [router_1.ActivatedRoute,
+        router_1.Router,
         clone_service_1.CloneService])
 ], CloneFormComponent);
 exports.CloneFormComponent = CloneFormComponent;

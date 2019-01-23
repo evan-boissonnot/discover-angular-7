@@ -25,6 +25,10 @@ export class MoreDetailCloneComponent implements OnInit{
         this._router.navigate(["./clones"]);
     }
 
+    editOne(clone: Clone): void {
+        this._router.navigate(["./clone/edition/", clone.id]);
+    }
+
     get clone(): Clone {
         return this._clone;
     }

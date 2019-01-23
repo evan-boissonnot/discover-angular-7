@@ -4,12 +4,15 @@
         <div class="card-panel">
             <div class="form-group">
                 <label for="name">Nom</label>
-                <input type="text" required pattern="^[a-zA-Z]{1, 50}" name="name" [(ngModel)]="clone.name" id="" #name="ngModel">
+                <input type="text" required  name="name" [(ngModel)]="clone.name" id="" #name="ngModel">
+                <div class="card-panel red accent-1" [hidden]="name.valid || name.pristine">
+                    Nom du clone requis
+                </div>
             </div>
         </div>
       </div>
   </div>
   <div class="row">
-      <input type="submit" value="Enregistrer"  class="waves-effect waves-light btn" [disabled]="myForm.form.valid"/>
+      <input type="submit" value="Enregistrer"  class="waves-effect waves-light btn" [disabled]="! myForm.form.valid"/>
   </div>
 </form>

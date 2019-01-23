@@ -1,6 +1,8 @@
 <ng-container *ngIf="clone; else elseTemplate">
     <div class="container">
         {{clone.name}}
+
+        <a (click)="editOne(clone)">Editer</a>
     </div>
 </ng-container>
 <ng-template #elseTemplate>

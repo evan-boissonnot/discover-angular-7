@@ -10,37 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
-const clone_service_1 = require("./../services/clone-service");
 const router_1 = require("@angular/router");
-let MoreDetailCloneComponent = class MoreDetailCloneComponent {
+const clone_service_1 = require("../../services/clone-service");
+let EditCloneComponent = class EditCloneComponent {
     constructor(_route, _router, _service) {
         this._route = _route;
         this._router = _router;
         this._service = _service;
+        this.clone = null;
     }
     ngOnInit() {
-        this._clone = this._service.getOne(+this._route.snapshot.params["id"]);
-    }
-    goBack() {
-        this._router.navigate(["./clones"]);
-    }
-    editOne(clone) {
-        this._router.navigate(["./clone/edition/", clone.id]);
-    }
-    get clone() {
-        return this._clone;
-    }
-    set clone(value) {
-        this._clone = value;
     }
 };
-MoreDetailCloneComponent = __decorate([
+EditCloneComponent = __decorate([
     core_1.Component({
-        selector: "detail-clone",
-        templateUrl: "./app/clones/more-detail-clone.component.html"
+        selector: 'app-edit-clone',
+        templateUrl: './app/clones/edit-clone/edit-clone.component.html',
+        styleUrls: ['./app/clones/edit-clone/edit-clone.component.css']
     }),
-    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router,
+    __metadata("design:paramtypes", [router_1.ActivatedRoute,
+        router_1.Router,
         clone_service_1.CloneService])
-], MoreDetailCloneComponent);
-exports.MoreDetailCloneComponent = MoreDetailCloneComponent;
-//# sourceMappingURL=more-detail-clone.component.js.map
+], EditCloneComponent);
+exports.EditCloneComponent = EditCloneComponent;
+//# sourceMappingURL=edit-clone.component.js.map

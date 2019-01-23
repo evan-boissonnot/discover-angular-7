@@ -5,13 +5,14 @@ import { CloneService } from '../../services/clone-service';
 
 @Component({
   selector: 'app-clone-form',
-  templateUrl: './clone-form.component.html',
-  styleUrls: ['./clone-form.component.css']
+  templateUrl: './app/clones/clone-form/clone-form.component.html',
+  styleUrls: ['./app/clones/clone-form/clone-form.component.css']
 })
 export class CloneFormComponent implements OnInit {
   @Input() clone: Clone;
 
-  constructor(private _route: ActivatedRoute, private _router: Router,
+  constructor(private _route: ActivatedRoute, 
+              private _router: Router,
               private _service: CloneService) { }
 
   ngOnInit() {

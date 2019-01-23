@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MoreDetailCloneComponent } from '../clones/more-detail-clone.component';
 import { CloneListComponent } from '../clones/clone-list/clone-list.component';
+import { CloneEditComponent } from './clone-edit/clone-edit.component';
 
 const routes: Routes = [
-    { path: 'clones', component: CloneListComponent},
-    { path: 'clone/:id', component: MoreDetailCloneComponent}, // no slash to start url
+    { path: 'clones', component: CloneListComponent },
+    { path: 'clone/edition/:id', component: CloneEditComponent },
+    { path: 'clone/:id', component: MoreDetailCloneComponent }, // no slash to start url
 ];
 
 @NgModule({

@@ -10,8 +10,10 @@ const core_1 = require("@angular/core");
 const router_1 = require("@angular/router");
 const more_detail_clone_component_1 = require("../clones/more-detail-clone.component");
 const clone_list_component_1 = require("../clones/clone-list/clone-list.component");
+const clone_edit_component_1 = require("./clone-edit/clone-edit.component");
 const routes = [
     { path: 'clones', component: clone_list_component_1.CloneListComponent },
+    { path: 'clone/edition/:id', component: clone_edit_component_1.CloneEditComponent },
     { path: 'clone/:id', component: more_detail_clone_component_1.MoreDetailCloneComponent },
 ];
 let ClonesRouteConfigModule = class ClonesRouteConfigModule {
