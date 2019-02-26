@@ -8,25 +8,25 @@ import {HighlightDirective} from './highlight.directive';
 import {AppComponent} from "./app.component";
 import { NotFoundExceptionComponent } from './not-found-exception/not-found-exception.component';
 import { ClonesModule } from "./clones/clones.module";
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
    imports: [
-      BrowserModule, 
-      ClonesModule, // declaring before RouteConfig to be sure routes will be ok
-      RouteConfigModule // global routes
+      BrowserModule,
+      ClonesModule,
+      //declaringbeforeRouteConfigtobesurerouteswillbeok\\r\\nRouteConfigModule//globalroutes
    ],
    declarations: [
       AppComponent,
       HighlightDirective,
-      NotFoundExceptionComponent
+      NotFoundExceptionComponent,
+      LoaderComponent
    ],
    bootstrap: [
       AppComponent//moduleracineaudémarrage
    ],
-   providers: [
-       
-   ]
+   providers: []
 })
 export class AppModule {
 

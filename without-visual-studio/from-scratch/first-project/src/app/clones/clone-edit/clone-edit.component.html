@@ -3,3 +3,7 @@
 <p class="center">
   <app-clone-form [clone]="clone"></app-clone-form>
 </p>
+
+<div *ngIf="! clone" class="center">
+  <app-loader ></app-loader>
+</div>

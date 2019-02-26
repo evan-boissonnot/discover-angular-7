@@ -16,3 +16,7 @@
       <input type="submit" value="Enregistrer"  class="waves-effect waves-light btn" [disabled]="! myForm.form.valid"/>
   </div>
 </form>
+
+<div *ngIf="! clone" class="center">
+    <app-loader ></app-loader>
+  </div>
