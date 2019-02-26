@@ -13,6 +13,7 @@ const highlight_directive_1 = require("./highlight.directive");
 const app_component_1 = require("./app.component");
 const not_found_exception_component_1 = require("./not-found-exception/not-found-exception.component");
 const clones_module_1 = require("./clones/clones.module");
+const auth_guard_service_1 = require("./services/auth-guard.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -20,7 +21,8 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             clones_module_1.ClonesModule,
-            route_config_module_1.RouteConfigModule // global routes
+            //declaringbeforeRouteConfigtobesurerouteswillbeok\\r\\n
+            route_config_module_1.RouteConfigModule //globalroutes
         ],
         declarations: [
             app_component_1.AppComponent,
@@ -30,7 +32,9 @@ AppModule = __decorate([
         bootstrap: [
             app_component_1.AppComponent //moduleracineaudémarrage
         ],
-        providers: []
+        providers: [
+            auth_guard_service_1.AuthGuardService
+        ]
     })
 ], AppModule);
 exports.AppModule = AppModule;

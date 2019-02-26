@@ -9,24 +9,27 @@ import {AppComponent} from "./app.component";
 import { NotFoundExceptionComponent } from './not-found-exception/not-found-exception.component';
 import { ClonesModule } from "./clones/clones.module";
 import { LoaderComponent } from './loader/loader.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 @NgModule({
    imports: [
       BrowserModule,
       ClonesModule,
-      //declaringbeforeRouteConfigtobesurerouteswillbeok\\r\\nRouteConfigModule//globalroutes
+      //declaringbeforeRouteConfigtobesurerouteswillbeok\\r\\n
+      RouteConfigModule//globalroutes
    ],
    declarations: [
       AppComponent,
       HighlightDirective,
-      NotFoundExceptionComponent,
-      LoaderComponent
+      NotFoundExceptionComponent
    ],
    bootstrap: [
       AppComponent//moduleracineaudémarrage
    ],
-   providers: []
+   providers: [
+      AuthGuardService
+   ]
 })
 export class AppModule {
 

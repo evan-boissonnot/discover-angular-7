@@ -15,6 +15,7 @@ const clones_route_config_module_1 = require("./clones-route-config.module");
 const clone_service_1 = require("../services/clone-service");
 const clone_form_component_1 = require("./clone-form/clone-form.component");
 const clone_edit_component_1 = require("./clone-edit/clone-edit.component");
+const loader_component_1 = require("../loader/loader.component");
 let ClonesModule = class ClonesModule {
 };
 ClonesModule = __decorate([
@@ -25,6 +26,7 @@ ClonesModule = __decorate([
             clones_route_config_module_1.ClonesRouteConfigModule
         ],
         declarations: [
+            loader_component_1.LoaderComponent,
             clone_list_component_1.CloneListComponent,
             more_detail_clone_component_1.MoreDetailCloneComponent,
             clone_form_component_1.CloneFormComponent,

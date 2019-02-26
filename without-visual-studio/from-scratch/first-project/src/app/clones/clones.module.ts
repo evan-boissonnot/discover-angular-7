@@ -8,6 +8,7 @@ import { ClonesRouteConfigModule } from './clones-route-config.module';
 import { CloneService } from '../services/clone-service';
 import { CloneFormComponent } from './clone-form/clone-form.component';
 import { CloneEditComponent } from './clone-edit/clone-edit.component';
+import { LoaderComponent } from '../loader/loader.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { CloneEditComponent } from './clone-edit/clone-edit.component';
     ClonesRouteConfigModule
   ],
   declarations: [
+    LoaderComponent,
     CloneListComponent,
     MoreDetailCloneComponent,
     CloneFormComponent,
