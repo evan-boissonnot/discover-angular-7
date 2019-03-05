@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundExceptionComponent } from '../not-found-exception/not-found-exception.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'clones', pathMatch: 'full' },
+  { path: '', redirectTo: 'clone/all', pathMatch: 'full' },
   { path: '**', component: NotFoundExceptionComponent}
 ];
 

@@ -14,6 +14,7 @@ const app_component_1 = require("./app.component");
 const not_found_exception_component_1 = require("./not-found-exception/not-found-exception.component");
 const clones_module_1 = require("./clones/clones.module");
 const auth_guard_service_1 = require("./services/auth-guard.service");
+const auth_service_1 = require("./services/auth.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -33,6 +34,7 @@ AppModule = __decorate([
             app_component_1.AppComponent //moduleracineaudémarrage
         ],
         providers: [
+            auth_service_1.AuthService,
             auth_guard_service_1.AuthGuardService
         ]
     })

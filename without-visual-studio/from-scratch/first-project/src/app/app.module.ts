@@ -10,6 +10,7 @@ import { NotFoundExceptionComponent } from './not-found-exception/not-found-exce
 import { ClonesModule } from "./clones/clones.module";
 import { LoaderComponent } from './loader/loader.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AuthGuardService } from './services/auth-guard.service';
       AppComponent//moduleracineaudémarrage
    ],
    providers: [
+      AuthService,
       AuthGuardService
    ]
 })

@@ -22,7 +22,7 @@ export class MoreDetailCloneComponent implements OnInit{
     }
 
     goBack() {
-        this._router.navigate(["./clones"]);
+        this._router.navigate(["./clone/all"]);
     }
 
     editOne(clone: Clone): void {

@@ -22,7 +22,7 @@ let MoreDetailCloneComponent = class MoreDetailCloneComponent {
         this._clone = this._service.getOne(+this._route.snapshot.params["id"]);
     }
     goBack() {
-        this._router.navigate(["./clones"]);
+        this._router.navigate(["./clone/all"]);
     }
     editOne(clone) {
         this._router.navigate(["./clone/edition/", clone.id]);

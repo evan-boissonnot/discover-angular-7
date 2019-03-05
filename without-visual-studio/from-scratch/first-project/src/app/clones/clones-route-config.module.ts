@@ -6,10 +6,23 @@ import { CloneListComponent } from '../clones/clone-list/clone-list.component';
 import { CloneEditComponent } from './clone-edit/clone-edit.component';
 import { AuthGuardService } from '../services/auth-guard.service';
 
+// const routes: Routes = [
+//     { path: 'clones', component: CloneListComponent },
+//     { path: 'clone/edition/:id', component: CloneEditComponent, canActivate: [AuthGuardService] },
+//     { path: 'clone/:id', component: MoreDetailCloneComponent }, // no slash to start url
+// ];
+
 const routes: Routes = [
-    { path: 'clones', component: CloneListComponent },
-    { path: 'clone/edition/:id', component: CloneEditComponent, canActivate: [AuthGuardService] },
-    { path: 'clone/:id', component: MoreDetailCloneComponent }, // no slash to start url
+    {
+        path: 'clone',
+        canActivate: [ AuthGuardService ],
+        children: [
+            { path: 'all', component: CloneListComponent },
+            { path: 'edition/:id', component: CloneEditComponent },
+            { path: ':id', component: MoreDetailCloneComponent }, // no slash to start url
+        ]
+    }
+    
 ];
 
 @NgModule({

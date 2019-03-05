@@ -10,7 +10,7 @@ const core_1 = require("@angular/core");
 const router_1 = require("@angular/router");
 const not_found_exception_component_1 = require("../not-found-exception/not-found-exception.component");
 const routes = [
-    { path: '', redirectTo: 'clones', pathMatch: 'full' },
+    { path: '', redirectTo: 'clone/all', pathMatch: 'full' },
     { path: '**', component: not_found_exception_component_1.NotFoundExceptionComponent }
 ];
 let RouteConfigModule = class RouteConfigModule {

@@ -12,10 +12,21 @@ const more_detail_clone_component_1 = require("../clones/more-detail-clone.compo
 const clone_list_component_1 = require("../clones/clone-list/clone-list.component");
 const clone_edit_component_1 = require("./clone-edit/clone-edit.component");
 const auth_guard_service_1 = require("../services/auth-guard.service");
+// const routes: Routes = [
+//     { path: 'clones', component: CloneListComponent },
+//     { path: 'clone/edition/:id', component: CloneEditComponent, canActivate: [AuthGuardService] },
+//     { path: 'clone/:id', component: MoreDetailCloneComponent }, // no slash to start url
+// ];
 const routes = [
-    { path: 'clones', component: clone_list_component_1.CloneListComponent },
-    { path: 'clone/edition/:id', component: clone_edit_component_1.CloneEditComponent, canActivate: [auth_guard_service_1.AuthGuardService] },
-    { path: 'clone/:id', component: more_detail_clone_component_1.MoreDetailCloneComponent },
+    {
+        path: 'clone',
+        canActivate: [auth_guard_service_1.AuthGuardService],
+        children: [
+            { path: 'all', component: clone_list_component_1.CloneListComponent },
+            { path: 'edition/:id', component: clone_edit_component_1.CloneEditComponent },
+            { path: ':id', component: more_detail_clone_component_1.MoreDetailCloneComponent },
+        ]
+    }
 ];
 let ClonesRouteConfigModule = class ClonesRouteConfigModule {
 };
