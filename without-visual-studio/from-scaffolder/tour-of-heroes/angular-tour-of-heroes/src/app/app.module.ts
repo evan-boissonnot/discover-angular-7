@@ -7,13 +7,13 @@ import { AppComponent } from './app.component';
 import { MessageService } from './services/message.service';
 import { MessageComponent } from './message/message.component';
 import { HeroesModule } from './heroes/heroes.module';
-import { LoaderComponent } from './loader/loader.component';
+//import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       MessageComponent,
-      LoaderComponent
+      //LoaderComponent
    ],
    imports: [
       BrowserModule,

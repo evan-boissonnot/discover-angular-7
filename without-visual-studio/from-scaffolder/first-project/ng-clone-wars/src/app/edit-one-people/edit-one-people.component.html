@@ -1,0 +1,4 @@
+<form #uneForm="ngForm" (ngSubmit)="saveOne();">
+  <input type="text" [(ngModel)]="item.name" name="name" required #name="ngModel">
+  <input type="submit" value="Ajouter">
+</form>

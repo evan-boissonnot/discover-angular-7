@@ -1,6 +1,8 @@
 <app-hero-search (searchingHeroes)="receiptSearchingHeroes($event)"></app-hero-search>
 <app-hero-add (heroAdded)="receiptHeroAdded($event)" ></app-hero-add>
 
+
+
 <div class="container" *ngIf="heroes">
     <div *ngFor="let hero of heroes" [ngClass]="{'masuperclass': false}">
         <div class="card"   [class.selected]="hero === selectHero" >
@@ -14,7 +16,7 @@
                             </p>
                     </div>
                 </div>
-        </div>     
+        </div>
     </div>
 </div>
 

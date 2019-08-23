@@ -17,8 +17,8 @@ import { AuthService } from './services/auth.service';
    imports: [
       BrowserModule,
       ClonesModule,
-      //declaringbeforeRouteConfigtobesurerouteswillbeok\\r\\n
-      RouteConfigModule//globalroutes
+      //declaring beforeRouteConfigtobesurerouteswillbeok\\r\\n
+      RouteConfigModule//global routes
    ],
    declarations: [
       AppComponent,
@@ -26,7 +26,7 @@ import { AuthService } from './services/auth.service';
       NotFoundExceptionComponent
    ],
    bootstrap: [
-      AppComponent//moduleracineaudémarrage
+      AppComponent//module racine au démarrage
    ],
    providers: [
       AuthService,
