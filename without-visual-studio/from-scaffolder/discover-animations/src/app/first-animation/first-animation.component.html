@@ -1,0 +1,7 @@
+<h2>Open close animation</h2>
+
+<button (click)="toggle()"> toggle</button>
+
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>
