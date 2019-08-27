@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
-  selector: 'app-first-animation',
+  selector: 'app-first-animation-with-wild-card',
   templateUrl: './first-animation.component.html',
   styleUrls: ['./first-animation.component.css'],
   animations: [
@@ -23,10 +23,27 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       transition('closed => opening', [
         animate('0.5s')
       ]),
+      transition('* => closed', [
+        animate('2s')
+      ]),
+      transition('* => opening', [
+        animate('0.5s')
+      ]),
+      transition('opening <=> closed', [
+        animate('0.5s')
+      ]),
+      transition ('* => opening', [
+        animate ('1s',
+          style ({ opacity: '*' }),
+        ),
+      ]),
+      transition('* => *', [
+        animate('1s')
+      ])
     ])
   ]
 })
-export class FirstAnimationComponent implements OnInit {
+export class FirstAnimationWithWildCardComponent implements OnInit {
   isOpen = true;
 
   constructor() { }
