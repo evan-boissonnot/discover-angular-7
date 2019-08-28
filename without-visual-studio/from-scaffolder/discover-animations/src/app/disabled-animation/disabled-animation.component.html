@@ -1,0 +1,7 @@
+<button (click)="changeState()">Click</button>
+<button (click)="changeVisible()">Click2</button>
+<div [@.disabled]="isDisabled">
+  <p *ngIf="isShow" @anim01>
+    disabled-animation works!
+  </p>
+</div>

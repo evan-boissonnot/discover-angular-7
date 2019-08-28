@@ -8,6 +8,7 @@ import { FirstAnimationComponent } from './first-animation/first-animation.compo
 import { FirstAnimationWithWildCardComponent } from './first-animation-with-wildcard/first-animation.component';
 import { EnterLeavingAnimationComponent } from './enter-leaving-animation/enter-leaving-animation.component';
 import { NgIfAnimationEnterLeaveAnimationComponent } from './ng-if-animation-enter-leave-animation/ng-if-animation-enter-leave-animation.component';
+import { DisabledAnimationComponent } from './disabled-animation/disabled-animation.component';
 
 @NgModule({
    declarations: [
@@ -15,7 +16,8 @@ import { NgIfAnimationEnterLeaveAnimationComponent } from './ng-if-animation-ent
       FirstAnimationComponent,
       FirstAnimationWithWildCardComponent,
       EnterLeavingAnimationComponent,
-      NgIfAnimationEnterLeaveAnimationComponent
+      NgIfAnimationEnterLeaveAnimationComponent,
+      DisabledAnimationComponent
    ],
    imports: [
       BrowserModule,
