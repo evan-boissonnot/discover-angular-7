@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { FirstAnimationComponent } from './first-animation/first-animation.component';
 import { FirstAnimationWithWildCardComponent } from './first-animation-with-wildcard/first-animation.component';
 import { EnterLeavingAnimationComponent } from './enter-leaving-animation/enter-leaving-animation.component';
+import { NgIfAnimationEnterLeaveAnimationComponent } from './ng-if-animation-enter-leave-animation/ng-if-animation-enter-leave-animation.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       FirstAnimationComponent,
       FirstAnimationWithWildCardComponent,
-      EnterLeavingAnimationComponent
+      EnterLeavingAnimationComponent,
+      NgIfAnimationEnterLeaveAnimationComponent
    ],
    imports: [
       BrowserModule,
