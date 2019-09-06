@@ -1,0 +1,8 @@
+<button (click)="populate()">{{ isPopulated ? 'Clear' : 'Populate'}}</button>
+<button (click)="addOne()">Add one</button>
+
+<div [@pageAnimations]="items.length"  *ngFor="let item of items">
+  <div class="test">
+    {{item}}
+  </div>
+</div>

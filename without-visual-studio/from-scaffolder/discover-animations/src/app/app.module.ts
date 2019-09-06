@@ -10,6 +10,7 @@ import { EnterLeavingAnimationComponent } from './enter-leaving-animation/enter-
 import { NgIfAnimationEnterLeaveAnimationComponent } from './ng-if-animation-enter-leave-animation/ng-if-animation-enter-leave-animation.component';
 import { DisabledAnimationComponent } from './disabled-animation/disabled-animation.component';
 import { KeyframeAnimationComponent } from './keyframe-animation/keyframe-animation.component';
+import { QueryAndStaggerComponent } from './query-and-stagger/query-and-stagger.component';
 
 @NgModule({
    declarations: [
@@ -19,7 +20,8 @@ import { KeyframeAnimationComponent } from './keyframe-animation/keyframe-animat
       EnterLeavingAnimationComponent,
       NgIfAnimationEnterLeaveAnimationComponent,
       DisabledAnimationComponent,
-      KeyframeAnimationComponent
+      KeyframeAnimationComponent,
+      QueryAndStaggerComponent
    ],
    imports: [
       BrowserModule,
