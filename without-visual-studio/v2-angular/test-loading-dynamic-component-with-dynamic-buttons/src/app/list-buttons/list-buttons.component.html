@@ -1,0 +1,6 @@
+<ng-template appLandingZona></ng-template>
+
+
+<div *ngFor="let droide of myDroides">
+  <button (click)="loadOneComponent(droide)">{{ droide.name }}</button>
+</div>
