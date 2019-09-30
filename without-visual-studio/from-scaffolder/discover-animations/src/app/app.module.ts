@@ -11,6 +11,7 @@ import { NgIfAnimationEnterLeaveAnimationComponent } from './ng-if-animation-ent
 import { DisabledAnimationComponent } from './disabled-animation/disabled-animation.component';
 import { KeyframeAnimationComponent } from './keyframe-animation/keyframe-animation.component';
 import { QueryAndStaggerComponent } from './query-and-stagger/query-and-stagger.component';
+import { GroupAnimationComponent } from './group-animation/group-animation.component';
 
 @NgModule({
    declarations: [
@@ -21,7 +22,8 @@ import { QueryAndStaggerComponent } from './query-and-stagger/query-and-stagger.
       NgIfAnimationEnterLeaveAnimationComponent,
       DisabledAnimationComponent,
       KeyframeAnimationComponent,
-      QueryAndStaggerComponent
+      QueryAndStaggerComponent,
+      GroupAnimationComponent
    ],
    imports: [
       BrowserModule,

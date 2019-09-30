@@ -18,7 +18,8 @@ import { HeroesModule } from './heroes/heroes.module';
    imports: [
       BrowserModule,
       FormsModule,
-      //allowyoutouseforexample[(ngModel)=\\\r\nHttpClientModule,
+      //allowyoutouseforexample[(ngModel)=\\\r\n
+      HttpClientModule,
       //alwaysafterBrowserModule,
       HeroesModule
    ],
