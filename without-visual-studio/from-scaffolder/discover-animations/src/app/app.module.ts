@@ -12,6 +12,7 @@ import { DisabledAnimationComponent } from './disabled-animation/disabled-animat
 import { KeyframeAnimationComponent } from './keyframe-animation/keyframe-animation.component';
 import { QueryAndStaggerComponent } from './query-and-stagger/query-and-stagger.component';
 import { GroupAnimationComponent } from './group-animation/group-animation.component';
+import { TestObservableComponent } from './test-observable/test-observable.component';
 
 @NgModule({
    declarations: [
@@ -23,7 +24,8 @@ import { GroupAnimationComponent } from './group-animation/group-animation.compo
       DisabledAnimationComponent,
       KeyframeAnimationComponent,
       QueryAndStaggerComponent,
-      GroupAnimationComponent
+      GroupAnimationComponent,
+      TestObservableComponent
    ],
    imports: [
       BrowserModule,
