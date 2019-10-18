@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "folder-structures": {
+    "one-file-to-rule-config": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/folder-structures",
+            "outputPath": "dist/one-file-to-rule-config",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -26,7 +26,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/scripts/custom-environment.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -63,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "folder-structures:build"
+            "browserTarget": "one-file-to-rule-config:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "folder-structures:build:production"
+              "browserTarget": "one-file-to-rule-config:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "folder-structures:build"
+            "browserTarget": "one-file-to-rule-config:build"
           }
         },
         "test": {
@@ -111,15 +113,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "folder-structures:serve"
+            "devServerTarget": "one-file-to-rule-config:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "folder-structures:serve:production"
+              "devServerTarget": "one-file-to-rule-config:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "folder-structures"
+  "defaultProject": "one-file-to-rule-config"
 }
